@@ -1,5 +1,5 @@
 import React from "react";
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLinkedin, FaDownload } from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLinkedin, FaDownload, FaGithub } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -36,6 +36,9 @@ const Contact = () => {
         </a>
         <a className="btn btn-outline-light btn-lg custom-btn" href="https://www.linkedin.com/in/madhesh-s-219aa8278/" target="_blank" rel="noreferrer">
           <FaLinkedin className="me-2" /> LinkedIn
+        </a>
+        <a className="btn btn-outline-light btn-lg custom-btn" href="https://github.com/madheshsathya2004" target="_blank" rel="noreferrer">
+          <FaGithub className="me-2" /> Github
         </a>
       </div>
     </section>
