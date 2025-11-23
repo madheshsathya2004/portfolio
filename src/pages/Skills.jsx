@@ -1,5 +1,6 @@
 import React from "react";
 import { FaCode, FaCogs, FaLaptopCode, FaDatabase, FaBrain, FaPalette, FaComments, FaKeyboard } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const prog = [
@@ -19,8 +20,14 @@ const Skills = () => {
     { name: "Communication", icon: <FaComments className="icon-skill" /> },
     { name: "Fast Typing", icon: <FaKeyboard className="icon-skill" /> },
   ];
-
-  return (
+   return (
+   <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -40 }}
+    transition={{ duration: 0.6 }}
+  >
+    
     <section className="container py-5">
       <h2 className="fw-bold neon text-center mb-4">Skills</h2>
 
@@ -48,6 +55,8 @@ const Skills = () => {
         </ul>
       </div>
     </section>
+ 
+  </motion.div>
   );
 };
 

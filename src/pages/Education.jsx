@@ -1,8 +1,15 @@
 import React from "react";
 import { FaGraduationCap } from "react-icons/fa";
-
+import { motion } from "framer-motion";
 const Education = () => {
   return (
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -40 }}
+    transition={{ duration: 0.6 }}
+  >
+    
     <section className="container py-5">
       <h2 className="fw-bold neon text-center mb-4">Education</h2>
 
@@ -31,6 +38,8 @@ const Education = () => {
 
       </div>
     </section>
+  
+  </motion.div>
   );
 };
 

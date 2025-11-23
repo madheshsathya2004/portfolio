@@ -1,8 +1,18 @@
 import React from "react";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLinkedin, FaDownload, FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Contact = () => {
-  return (
+    return (
+  
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -40 }}
+    transition={{ duration: 0.6 }}
+  >
+
+  
     <section className="container py-5 text-center">
       <h2 className="fw-bold neon mb-5">Contact Me</h2>
 
@@ -42,7 +52,9 @@ const Contact = () => {
         </a>
       </div>
     </section>
-  );
+ 
+  </motion.div>
+   );
 };
 
 export default Contact;

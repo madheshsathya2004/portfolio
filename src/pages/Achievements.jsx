@@ -1,5 +1,6 @@
 import React from "react";
 import { FaTrophy, FaMedal } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Achievements = () => {
   const items = [
@@ -9,8 +10,15 @@ const Achievements = () => {
     "Certificate of Merit — Puducherry Technological University - First Rank — B.Tech Final Year (2024-2025)",
     "Runner-up Ideathon (TALROP & Times of India) — ₹40,000 prize",
   ];
+   return (
+    <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -40 }}
+    transition={{ duration: 0.6 }}
+  >
 
-  return (
+    
     <section className="container py-5">
       <h2 className="fw-bold neon text-center mb-4"><FaTrophy className="icon" /> Achievements</h2>
 
@@ -23,7 +31,10 @@ const Achievements = () => {
         ))}
       </div>
     </section>
-  );
+ 
+  </motion.div>
+ );
+ 
 };
 
 export default Achievements;

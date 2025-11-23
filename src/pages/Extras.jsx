@@ -1,9 +1,19 @@
 import React from "react";
 import { FaLanguage, FaTableTennis, FaMedal, FaKeyboard } from "react-icons/fa";
 import { MdEmojiEvents } from "react-icons/md";
+import { motion } from "framer-motion";
 
 const Extras = () => {
-  return (
+     return (
+    
+    <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -40 }}
+    transition={{ duration: 0.6 }}
+  >
+
+   
     <section className="container py-5">
       <h2 className="fw-bold neon text-center mb-4">Languages & Extracurriculars</h2>
 
@@ -50,7 +60,10 @@ const Extras = () => {
         </ul>
       </div>
     </section>
-  );
+ 
+  </motion.div>
+   );
+  
 };
 
 export default Extras;

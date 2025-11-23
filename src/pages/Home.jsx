@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+
 import {
   FaEnvelope,
   FaPhoneAlt,
@@ -11,7 +14,15 @@ import {
 } from "react-icons/fa";
 
 const Home = () => {
-  return (
+
+  return(
+   <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -40 }}
+    transition={{ duration: 0.6 }}
+  >
+    
     <header className="hero text-white d-flex align-items-center justify-content-center text-center">
       <div className="container">
 
@@ -71,7 +82,9 @@ const Home = () => {
         </div>
       </div>
     </header>
-  );
+  
+  </motion.div>
+ );
 };
 
 export default Home;

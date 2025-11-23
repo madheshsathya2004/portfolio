@@ -1,8 +1,17 @@
 import React from "react";
 import { FaUsersCog } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Workshops = () => {
-  return (
+  
+   return (
+   <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -40 }}
+    transition={{ duration: 0.6 }}
+  >
+   
     <section className="container py-5">
       <h2 className="fw-bold neon text-center mb-4"><FaUsersCog className="icon" /> Workshops</h2>
 
@@ -16,7 +25,9 @@ const Workshops = () => {
         </div>
       </div>
     </section>
-  );
+ 
+  </motion.div>
+   );
 };
 
 export default Workshops;
